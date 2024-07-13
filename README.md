@@ -7,3 +7,5 @@ swig -c++ -python test1.i
 python setup2.py build_ext --inplac
 
 then test the compilation with 
+
+python test.py
