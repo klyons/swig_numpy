@@ -3,9 +3,11 @@
 %{
     #define SWIG_FILE_WITH_INIT
     #include "test.h"
+    #include "vecTest.h"
 %}
 
 %include "numpy.i"
+%include "vecTest.h"
 
 %init %{
     import_array();
@@ -34,3 +36,5 @@ extern int ExRangeIntIn(int *myptr, int n);
 %apply (int* INPLACE_ARRAY2, int DIM1, int DIM2) {(int* mymatrix, int nrows, int ncols)}
 extern void ExRangeIntTwoWay2D(int* mymatrix, int nrows, int ncols);
 %clear (int* mymatrix, int nrows, int ncols);
+
+VecTest process_vector(const VecTest& vec);

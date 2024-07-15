@@ -7,6 +7,7 @@ import os
 import numpy as np
 
 
+
 vect1 = np.array([1, 2, 3, 4, 5], dtype=np.int16)
 
 vect2 = np.array([1, 2, 3, 4, 5], dtype=np.int32)
@@ -18,6 +19,8 @@ vect4 = np.array([[1, 2, 3], [4, 5, 6]], dtype=np.int32)
 
 # import RLExample
 import test
+
+print(dir(test))
 
 # takes an int
 vectInt = test.ExRangeInt( 14 )
@@ -38,3 +41,16 @@ print(vectInt3)
 print(vect4)
 test.ExRangeIntTwoWay2D(vect4)
 print(vect4)
+
+v = test.VecTest()
+v.x = 3.5
+v.y = 7.2
+v.z = 1.0
+
+print(v.x, v.y, v.z)
+
+# Check the returned result
+print(v)
+d = test.process_vector(v)
+print(d)
+print(d.x, d.y, d.z)
