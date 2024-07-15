@@ -3,6 +3,7 @@
 //this defines a custom object for us to pass in using python
 struct VecTest {
     double x, y, z;
+    VecTest(double x = 0.0, double y = 0.0, double z = 0.0) : x(x), y(y), z(z) {}
 };
 
 //this passes in a custum object from python and allows us to modify it in C++

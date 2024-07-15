@@ -58,6 +58,22 @@ class _SwigNonDynamicMeta(type):
     __setattr__ = _swig_setattr_nondynamic_class_variable(type.__setattr__)
 
 
+class VecTest(object):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+    x = property(_test.VecTest_x_get, _test.VecTest_x_set)
+    y = property(_test.VecTest_y_get, _test.VecTest_y_set)
+    z = property(_test.VecTest_z_get, _test.VecTest_z_set)
+
+    def __init__(self, x=0.0, y=0.0, z=0.0):
+        _test.VecTest_swiginit(self, _test.new_VecTest(x, y, z))
+    __swig_destroy__ = _test.delete_VecTest
+
+# Register VecTest in _test:
+_test.VecTest_swigregister(VecTest)
+
+def process_vector(vec):
+    return _test.process_vector(vec)
 
 def ExRangeInt(rangevec):
     return _test.ExRangeInt(rangevec)
