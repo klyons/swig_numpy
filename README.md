@@ -2,9 +2,9 @@
 python 3.12 with numpy 2.0
 run: (to compile the c)
 
-swig -c++ -python test1.i
+swig -c++ -python test.i
 
-python setup2.py build_ext --inplace
+python setup.py build_ext --inplace
 
 then test the compilation with 
 
