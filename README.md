@@ -4,7 +4,7 @@ run: (to compile the c)
 
 swig -c++ -python test1.i
 
-python setup2.py build_ext --inplac
+python setup2.py build_ext --inplace
 
 then test the compilation with 
 
